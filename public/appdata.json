@@ -1,6 +1,6 @@
 [
   {
-    "serviceId": 1,
+    "id": 1,
     "serviceName": "Winter Coat Fitting for Dogs",
     "providerName": "PawCare Studio",
     "providerEmail": "info@pawcare.com",
@@ -12,7 +12,7 @@
     "category": "Clothing"
   },
   {
-    "serviceId": 2,
+    "id": 2,
     "serviceName": "Heated Pet Bed Setup",
     "providerName": "CozyTails Pet Care",
     "providerEmail": "support@cozytails.com",
@@ -24,7 +24,7 @@
     "category": "Comfort"
   },
   {
-    "serviceId": 3,
+    "id": 3,
     "serviceName": "Winter Paw Protection & Waxing",
     "providerName": "PetFoot Spa",
     "providerEmail": "hello@petfootspa.com",
@@ -36,7 +36,7 @@
     "category": "Health"
   },
   {
-    "serviceId": 4,
+    "id": 4,
     "serviceName": "Winter Grooming & Fur Maintenance",
     "providerName": "FluffyFriends Salon",
     "providerEmail": "care@fluffyfriends.com",
@@ -48,7 +48,7 @@
     "category": "Grooming"
   },
   {
-    "serviceId": 5,
+    "id": 5,
     "serviceName": "Pet Winter Nutrition Consultation",
     "providerName": "HealthyPaws Nutritionists",
     "providerEmail": "contact@healthypaws.com",
@@ -60,7 +60,7 @@
     "category": "Nutrition"
   },
   {
-    "serviceId": 6,
+    "id": 6,
     "serviceName": "Warm Shelter Setup for Outdoor Pets",
     "providerName": "SafeHaven Pet Services",
     "providerEmail": "info@safehavenpets.com",

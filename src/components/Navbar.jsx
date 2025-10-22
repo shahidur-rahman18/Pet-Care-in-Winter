@@ -11,7 +11,7 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/services">Services</NavLink>
+        <NavLink to="/allservices">Services</NavLink>
       </li>
       <li>
         <NavLink to="/my-profile">My Profile</NavLink>
@@ -19,7 +19,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm md:px-5 fixed top-0 left-0 w-full z-20">
+    <div className="navbar bg-base-100 shadow-sm md:px-5 fixed top-0 left-0 w-full z-10">
       <div className="navbar-start  ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

@@ -4,10 +4,12 @@ import slide_1 from "../assets/slider-3.jpg";
 import slide_3 from "../assets/slider-1.jpg";
 import slide_4 from "../assets/slider-4.jpg";
 
+
 const Banner = () => {
+  
   return (
     <div>
-      <div className="carousel w-full ">
+      <div className="carousel w-full  ">
         {/* Added fixed height container and object-cover for consistent sizing */}
         <div id="slide1" className="carousel-item relative w-full">
           <div className="w-full h-96 md:h-[600px]">
@@ -83,6 +85,9 @@ const Banner = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="py-2 mt-5">
+        <h1 className="text-center text-5xl font-bold ">Our Services</h1>
       </div>
     </div>
   );

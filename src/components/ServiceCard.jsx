@@ -1,27 +1,26 @@
 import React from "react";
-import card from'../assets/slider-2.jpg'
+
 import { Link } from "react-router";
+import { CiStar, CiStreamOff } from "react-icons/ci";
 
-
-const ServiceCard = () => {
+const ServiceCard = ({ service }) => {
+  console.log(service);
+  const { id, serviceName, image, rating, price } = service;
+  console.log(id, serviceName, image, rating, price);
   return (
     <div className="card bg-base-100 border shadow-sm hover:scale-105 transition ease-in-out">
-      <figure className="h-48 overflow-hidden">
-        <img className="w-full object-cover" src={card} alt="Shoes" />
+      <figure className="aspect-square overflow-hidden rounded-lg">
+        <img className="w-full h-full object-cover" src={image} alt="Shoes" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">hello {/* {name} */}</h2>
+        <h2 className="card-title">{serviceName}</h2>
 
-        {/* <p>Category: {category}</p> */}
-        <p>Category: </p>
-        <p>Price: ${/* {price} */}</p>
+        <p>Price: ${price}</p>
+        <p>Rating: {rating}</p>
         <div className="card-actions justify-end">
-            
-          {/* <Link to={`/productDetails/ ${id}`} className="btn btn-outline">
+          <Link to={`/productDetails/ ${id}`} className="btn btn-outline">
             View Details
-          </Link> */}
-
-          
+          </Link>
         </div>
       </div>
     </div>
