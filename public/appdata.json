@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.ibb.co.com/XrFrKfqm/card-1.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Heated Pet Bed Setup",
+    "providerName": "CozyTails Pet Care",
+    "providerEmail": "support@cozytails.com",
+    "price": 40,
+    "rating": 4.8,
+    "slotsAvailable": 5,
+    "description": "Installation and guidance for safe heated pet beds to ensure warm and restful sleep during winter nights.",
+    "image": "https://i.ibb.co.com/N2Cd7VNc/card-2.jpg",
+    "category": "Comfort"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Winter Paw Protection & Waxing",
+    "providerName": "PetFoot Spa",
+    "providerEmail": "hello@petfootspa.com",
+    "price": 15,
+    "rating": 4.7,
+    "slotsAvailable": 7,
+    "description": "Protect your pet’s paws from ice, snow, and salt damage with our professional paw waxing service.",
+    "image": "https://i.ibb.co.com/607QgmsK/card-3.jpg",
+    "category": "Health"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Winter Grooming & Fur Maintenance",
+    "providerName": "FluffyFriends Salon",
+    "providerEmail": "care@fluffyfriends.com",
+    "price": 30,
+    "rating": 4.6,
+    "slotsAvailable": 6,
+    "description": "Seasonal grooming service to remove loose fur, prevent matting, and maintain a healthy winter coat.",
+    "image": "https://i.ibb.co.com/Y4qGh1DN/card-4.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Pet Winter Nutrition Consultation",
+    "providerName": "HealthyPaws Nutritionists",
+    "providerEmail": "contact@healthypaws.com",
+    "price": 35,
+    "rating": 4.9,
+    "slotsAvailable": 3,
+    "description": "Personalized meal plans to boost your pet’s energy and immunity during cold weather.",
+    "image": "https://i.ibb.co.com/67L71zVk/card-5.jpg",
+    "category": "Nutrition"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Warm Shelter Setup for Outdoor Pets",
+    "providerName": "SafeHaven Pet Services",
+    "providerEmail": "info@safehavenpets.com",
+    "price": 50,
+    "rating": 4.8,
+    "slotsAvailable": 2,
+    "description": "We provide insulated shelters and heating solutions to keep outdoor pets warm and secure during winter.",
+    "image": "https://i.ibb.co.com/SDVRrRH6/card-6.jpg",
+    "category": "Housing"
+  }
+]
