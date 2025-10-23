@@ -1,24 +1,79 @@
 import { Eye, EyeOff } from "lucide-react";
-import React, { useState } from "react";
-import { Link } from "react-router";
+import React, { useContext, useRef, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router";
+import { AuthContext } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 const SignIn = () => {
   const [show, setShow] = useState(false);
+  const {
+    signInWithEmailAndPasswordFunc,
+    signInWithEmailFunc,
+    sendPassResetEmailFunc,
+    setLoading,
+    setUser,
+    user,
+  } = useContext(AuthContext);
+  const location = useLocation();
+  const from = location.state || "/";
+  const navigate = useNavigate();
+  if (user) {
+    navigate("/");
+    return;
+  }
+   const emailRef = useRef(null);
+
   const handleSignin = (e) => {
     e.preventDefault();
     const email = e.target.email?.value;
     const password = e.target.password?.value;
-    console
-      .log({ email, password })
+    console.log({ email, password });
+    signInWithEmailAndPasswordFunc(email, password)
       .then((res) => {
         console.log(res);
+        setLoading(false);
+
+        if (!res.user?.emailVerified) {
+          toast.error("Your email is not verified.");
+          return;
+        }
+        setUser(res.user);
+        toast.success("Signin successful");
+        navigate(from);
       })
       .catch((e) => {
         console.log(e);
+        toast.error(e.message);
       });
   };
-  const handleGoogleSignin = () => {};
-  const handleForgetPassword = () => {};
+  const handleGoogleSignin = () => {
+    console.log("google signin");
+    signInWithEmailFunc()
+      .then((res) => {
+        console.log(res);
+        setLoading(false);
+        setUser(res.user);
+        navigate(from);
+        toast.success("Signin successful");
+      })
+      .catch((e) => {
+        console.log(e);
+        toast.error(e.message);
+      });
+  };
+  const handleForgetPassword = () => {
+    console.log();
+  const email = emailRef.current.value;
+  sendPassResetEmailFunc(email)
+    .then(() => {
+      setLoading(false);
+      toast.success("Check your email to reset password");
+    })
+    .catch((e) => {
+      toast.error(e.message);
+    });
+  };
+  
   return (
     <div className="min-h-[calc(100vh-20px)] flex items-center justify-center bg-gradient-to-br from-blue-200 via-indigo-500 to-purple-100 relative overflow-hidden">
       {/* Animated glow orbs */}
@@ -51,9 +106,9 @@ const SignIn = () => {
               <input
                 type="email"
                 name="email"
-                // ref={emailRef}
-                // value={email}
-                // onChange={(e) => setEmail(e.target.value)}
+                ref={emailRef}
+                /*   value={email}
+                onChange={(e) => setEmail(e.target.value)} */
                 placeholder="example@email.com"
                 className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
               />

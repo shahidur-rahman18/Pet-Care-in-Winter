@@ -1,24 +1,64 @@
 import { Eye, EyeOff } from "lucide-react";
 import React, { useContext, useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   const [show, setShow] = useState(false);
-  const {signUpRegister}=useContext(AuthContext)
-  
-  console.log('hi this is me ',signUpRegister)
+  const {
+    signUpRegister,
+    updateProfileFunc,
+    sendEmailVerificationFunc,
+    setLoading,
+    signoutUserFunc,
+    setUser,
+  } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  console.log("hi this is me ", signUpRegister);
 
   const handleSignup = (e) => {
     e.preventDefault();
+    const displayName = e.target.name?.value;
+    const photoURL = e.target.photo?.value;
     const email = e.target.email?.value;
-    const password = e.target.password?.value
-      // console.log({email,password})
+    const password = e.target.password?.value;
+    console.log("this is signup", { photoURL, displayName, email, password });
+    signUpRegister(email, password)
       .then((res) => {
-        // console.log(res);
+        updateProfileFunc(displayName, photoURL)
+          .then(() => {
+            console.log(res);
+            // 3rd step: Email verification
+            sendEmailVerificationFunc()
+              .then((res) => {
+                console.log(res);
+                setLoading(false);
+
+                // Signout user
+                signoutUserFunc().then(() => {
+                  toast.success(
+                    "Signup successful. Check your email to validate your account. "
+                  );
+                  setUser(null);
+                  navigate("/signin");
+                });
+              })
+              .catch((e) => {
+                console.log(e);
+                toast.error(e.message);
+              });
+          })
+          .catch((e) => {
+            console.log(e);
+            toast.error(e.message);
+          });
       })
+
       .catch((e) => {
-        // console.log(e);
+        console.log(e);
+        console.log(e.code);
       });
   };
   return (
