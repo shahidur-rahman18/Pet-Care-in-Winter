@@ -6,7 +6,7 @@ import { CiStar, CiStreamOff } from "react-icons/ci";
 const ServiceCard = ({ service }) => {
   console.log(service);
   const { id, serviceName, image, rating, price } = service;
-  console.log(id, serviceName, image, rating, price);
+  // console.log(id, serviceName, image, rating, price);
   return (
     <div className="card bg-base-100 border shadow-sm hover:scale-105 transition ease-in-out">
       <figure className="aspect-square overflow-hidden rounded-lg">
@@ -18,7 +18,7 @@ const ServiceCard = ({ service }) => {
         <p>Price: ${price}</p>
         <p>Rating: {rating}</p>
         <div className="card-actions justify-end">
-          <Link to={`/productDetails/ ${id}`} className="btn btn-outline">
+          <Link to={`/details/${id}`} className="btn btn-outline">
             View Details
           </Link>
         </div>

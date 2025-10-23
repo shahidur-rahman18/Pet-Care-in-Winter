@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
+import SignUp from "./SignUp";
 
 const MyProfile = () => {
-    return (
-        <div className='py-4'>
-            <h1>my profile</h1>
-            <h1>my profile</h1>
-            <h1>my profile</h1>
-        </div>
-    );
+  return (
+    <div className="py-4">
+      <SignUp></SignUp>
+    </div>
+  );
 };
 
 export default MyProfile;
