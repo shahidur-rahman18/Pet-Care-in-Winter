@@ -1,16 +1,85 @@
-# React + Vite
+# 🐾 Pet Cares – Winter Companion for Your Furry Friends
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=netlify)](https://pets-care-winter.netlify.app/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 💡 Project Overview
 
-## React Compiler
+**Pet Cares** is a cozy, winter-themed platform designed to help pet owners ensure their furry friends stay warm, safe, and healthy during the cold season. Users can explore **local pet care services, winter pet clothing, grooming options**, and expert tips — all in one friendly and intuitive interface.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This single-page application (SPA) emphasizes **minimalist design, smooth UI/UX, responsiveness**, and seamless navigation for an enjoyable user experience.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Live Project
+
+🔗 [Visit the Live Site](https://pets-care-winter.netlify.app/)
+
+---
+
+## 🛠 Key Features
+
+- **Responsive Layout:** Works perfectly on mobile, tablet, and desktop  
+- **SPA Navigation:** Route-based content with persistent Navbar & Footer  
+- **Winter Care Services:** Browse curated winter services for pets from JSON data  
+- **Service Details Page:** Protected route for logged-in users with full service info  
+- **Booking Form:** Submit requests for services (client-side only, with success toast)  
+- **Authentication:**  
+  - Signup & Login forms  
+  - Google social login  
+  - Password validation and toggle visibility  
+  - Forgot password with email redirect  
+- **My Profile:** View & update your profile (Name, Email, Image)  
+- **Extra Homepage Section:** Additional winter pet care tips / recommendations  
+- **Animations:** Subtle animations using **AOS, Animate.css, React-Spring, Swiper.js**  
+- **Toast Notifications:** Success & error alerts for user actions  
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+![Home](https://i.ibb.co.com/tPCnkr8L/Screenshot-2025-11-19-080924.png)
+
+### Popular Winter Services
+![Services](https://i.ibb.co.com/ksZFGGyq/Screenshot-2025-11-19-081145.png))
+
+### Service Details (Protected)
+![Service Details](https://i.ibb.co.com/hxCDd3tF/Screenshot-2025-11-19-081257.png)
+
+### Authentication Pages
+![Login & Signup](https://i.ibb.co.com/6cmhSD4d/Screenshot-2025-11-19-081457.png)
+
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React.js, HTML5, CSS3, JavaScript  
+- **Styling & UI Components:** Tailwind CSS, DaisyUI, Swiper.js  
+- **Animations:** AOS, Animate.css, React-Spring  
+- **Authentication & Backend Services:** Firebase Authentication  
+- **Hosting:** Netlify  
+
+---
+
+## 📂 JSON Data
+
+Sample structure for winter pet care services:
+
+```json
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.postimg.cc/example1.png",
+    "category": "Clothing"
+  }
+]
